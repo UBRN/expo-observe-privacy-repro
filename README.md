@@ -42,10 +42,9 @@ manager: npm.
    (unhandled-error capture), and `node_modules/expo-observe/ios/Observability.swift`
    (dispatch to Expo's servers).
 
-The original draft cited `expo-app-metrics/ios/CrashReporting/CrashReport.swift`
-and `ios/LogEvents/ErrorReport.swift` as separate files; in the installed
-57.0.20 package the equivalent behavior lives in `AppMetricsModule.swift` and
-`src/installErrorHandler.ts` as listed above, not under those two paths.
+In 57.0.20 the recording paths are `ios/MetricKitSubscriber.swift`,
+`ios/CrashReporting/CrashReport.swift` and `ios/LogEvents/ErrorReport.swift`
+(with `src/installErrorHandler.ts` installing the JavaScript error handler on import).
 
 ### Expected
 
